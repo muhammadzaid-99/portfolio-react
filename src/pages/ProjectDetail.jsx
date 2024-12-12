@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
-import { projects } from '../data/projects';
+import { projects } from '../data/all_data';
+import { Link } from 'react-router-dom';
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -11,6 +12,7 @@ const ProjectDetail = () => {
 
   return (
     <div className="max-w-3xl mx-auto">
+      <Link to="/projects" className="font-medium hover:underline underline-offset-1">{'<'} Back to Projects</Link>
       <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
       <img src={project.image} alt={project.title} className="w-full h-64 object-cover rounded-lg mb-4" />
       <p className="text-gray-700 mb-4">{project.long_description}</p>

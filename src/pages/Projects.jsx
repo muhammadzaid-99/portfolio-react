@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { projects } from '../data/projects';
+import { projects } from '../data/all_data';
 import ProjectCard from '../components/ProjectCard';
 
 const Projects = () => {
